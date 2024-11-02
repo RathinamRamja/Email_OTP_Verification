@@ -1,0 +1,104 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="container">
+        <center>
+        <h1>Welcome to the verify Otp</h1>
+        <form action="verifyotp" method="post"> 
+            {% csrf_token %} 
+            <label for="">your email </label> 
+            <input type="email" value="{{email}}" readonly name="email"><br><br>
+            <label for="">Enter your Otp</label>
+            <input type="number" placeholder="OTP" name="otp"><br><br>
+            <input type="submit"><br><br>
+        </form>
+        </center>
+    </div>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[readonly] {
+            background-color: #f0f0f0;
+            color: #888;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <center>
+            <h1>Welcome to Verify OTP</h1>
+            <form action="verifyotp" method="post"> 
+                {% csrf_token %} 
+                <label for="email">Your Email</label> 
+                <input type="email" value="{{email}}" readonly name="email"><br>
+                <label for="otp">Enter Your OTP</label>
+                <input type="number" placeholder="Enter OTP" name="otp" required><br>
+                <input type="submit" value="Verify OTP"><br><br>
+            </form>
+        </center>
+    </div>
+
+</body>
+</html>
